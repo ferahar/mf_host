@@ -1,0 +1,17 @@
+.app-messages {
+
+  height: 400px;
+  width: 320px;
+  position: fixed;
+  right: var(--space-s);
+  bottom: 0;
+
+  &-SnackBar {
+    overflow: auto;
+    flex: none;
+    width: 400px;
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
+  }
+
+}

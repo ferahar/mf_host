@@ -1,0 +1,12 @@
+@import "styles/common";
+@import "~ag-grid-community/src/styles/ag-grid";
+@import "~ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine";
+
+.header {
+  flex-shrink: 0;
+
+  &__fixed-top {
+    position: sticky;
+    top: 0;
+  }
+}

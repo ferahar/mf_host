@@ -1,0 +1,13 @@
+{
+  "name": "@dars-shell/types",
+  "version": "1.0.0",
+  "types": "index.d.ts",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "echo 'No test found'"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.27",
+    "@consta/uikit": "3.7.0"
+  }
+}

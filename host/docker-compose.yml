@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+
+  web:
+    container_name: iasurg.front
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        PORT: ${PORT}
+        API_URL: ${API_URL}
+        AG_GRID_KEY: ${AG_GRID_KEY}
+        NODE_ENV: 'production'
+    ports:
+      - "5000:5000"
+    depends_on:
+      - server-local
+    networks:
+      - lan
+
+  server-local:
+    container_name: iasurg.server-local
+    build:
+      context: .
+      dockerfile: docker/server-local.Dockerfile
+    environment:
+      PORT_API_LOCAL: ${PORT_API_LOCAL}
+      DELAY_API_LOCAL: ${DELAY_API_LOCAL}
+    ports:
+      - "5001:5001"
+    networks:
+      - lan
+
+networks:
+  lan:
+    driver: bridge

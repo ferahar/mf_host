@@ -1,0 +1,31 @@
+.mainMenu {
+  width: 320px;
+  &__content {
+
+  }
+}
+
+.mainMenu-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__header {
+    padding: var(--space-s) 0;
+  }
+  &__content {
+    flex-grow: 2;
+  }
+  &__footer {
+    background-color: var(--color-bg-ghost);
+  }
+  &__logo {
+    padding: var(--space-xl);
+  }
+  &__info {
+    padding: var(--space-s) var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+

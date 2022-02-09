@@ -1,0 +1,8 @@
+{
+  "/api/iasurgg/web/group-optimizations/*": "/$1",
+  "/api/iasurgg/web/expertize/*": "/$1",
+  "/api/iasurgg/web/group-chart/status": "/status",
+  "/api/iasurgg/web/*": "/$1",
+  "/api/iasurgg/web/group-optimizations/user_well_restrictions/:id": "/user_well_restrictions/:id"
+
+}

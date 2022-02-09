@@ -1,0 +1,15 @@
+.listItem {
+  padding: var(--space-m) var(--space-l);
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:hover {
+   background-color: var(--color-control-bg-clear-hover);
+  }
+}
+
+.listItem-icon {
+  display: flex;
+  width: var(--size-text-m);
+}

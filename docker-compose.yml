@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+
+  host:
+    build:
+      context: .
+      dockerfile: docker/host.Dockerfile
+      args:
+        PORT: ${PORT}
+        API_URL: ${API_URL}
+        AG_GRID_KEY: ${AG_GRID_KEY}
+        NODE_ENV: 'production'
+    ports:
+      - "5000:5000"
+    networks:
+      - lan
+
+  remote_template:
+    build:
+      context: .
+      dockerfile: docker/remote_template.Dockerfile
+    environment:
+      PORT: ${PORT}
+    ports:
+      - "5003:5003"
+    depends_on:
+      - host
+    networks:
+      - lan
+
+  nginx:
+    restart: always
+    build:
+      dockerfile: docker/webserver.Dockerfile
+      context: .
+    ports:
+      - "5080:80"
+    networks:
+      - lan
+
+networks:
+  lan:
+    driver: bridge

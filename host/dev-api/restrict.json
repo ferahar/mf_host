@@ -1,0 +1,16 @@
+{
+  "current_restrictions": {
+    "gas_injection":3888,
+    "gas_production":12700,
+    "liquid_production":10617,
+    "oil_production":5401
+  },
+  "grouping":1,
+  "optimization_direction":1,
+  "user_restrictions": {
+    "gas_injection":null,
+    "gas_production":12700,
+    "liquid_production":null,
+    "oil_production":null
+  }
+}
